@@ -1,0 +1,30 @@
+{
+  "name": "sql-yog-reader",
+  "description": "SQL Yog Reader",
+  "main": [],
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "bootstrap": "~3.3.6"
+  },
+  "devDependencies": {},
+  "moduleType": [],
+  "keywords": [
+    "javascript",
+    "web"
+  ],
+  "authors": [
+    "Pablo Veiga"
+  ],
+  "license": "MIT",
+  "ignore": [],
+  "private": true,
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/*.min.css*",
+        "dist/fonts/*",
+        "dist/js/*.min.js"
+      ]
+    }
+  }
+}

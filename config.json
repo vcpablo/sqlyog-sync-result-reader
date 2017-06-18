@@ -1,0 +1,8 @@
+{
+	"ftp": {
+		"host":"ftp.keplerce.com.br",
+		"remotePath":"www/2018",
+		"user":"keplerce",
+		"pass":"k3pl3r2016"
+	}
+}

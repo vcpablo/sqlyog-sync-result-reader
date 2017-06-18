@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SQL Yog Reader</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="page-header">
+        			SQL Yog Output Reader
+        		</h1>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="output">Output:</label>
+                            <textarea id="output" name="output" rows="10" class="form-control" placeholder="Paste the schema tools synchronization output here">
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="process" class="btn btn-success pull-right">Process</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hidden" id="no-results">
+                    <div class="col-sm-12">
+                        <h1 class="text-center">
+        			<i class="glyphicon glyphicon-thumbs-down"></i> Nothing to process.
+        		</h1>
+                    </div>
+                </div>
+                <div class="row hidden" id="loading">
+                    <div class="col-sm-12">
+                        <h1 class="text-center">
+        			<i class="glyphicon glyphicon-refresh glyphicon-spin"></i> Wait...
+        		</h1>
+                    </div>
+                </div>
+                <div class="row hidden" id="results">
+                    <div class="col-sm-12">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation">
+                                <a class="hidden" href="#errors" aria-controls="errors" role="tab" data-toggle="tab"><strong class="text-danger ">Errors</strong>
+                                    <span class="badge" id="totalErrors"></span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="hidden" href="#warnings" aria-controls="warnings" role="tab" data-toggle="tab"><strong class="text-warning">Warnings</strong>
+                                    <span class="badge" id="totalWarnings"></span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="hidden" href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><strong class="text-primary">Messages</strong>
+                                    <span class="badge" id="totalMessages"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane hidden" id="errors">
+                            </div>
+                            <div role="tabpanel" class="tab-pane hidden" id="warnings">
+                            </div>
+                            <div role="tabpanel" class="tab-pane hidden" id="messages">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+
+</html>
